@@ -47,10 +47,10 @@ struct sockaddr_in *pmp_get_public(struct sockaddr_in *gateway)
 	req_timeout.tv_usec = PMP_TIMEOUT;
 
 	recvsockaddr->sin_family = AF_INET;
-	recvsockaddr->sin_port = PMP_PORT;
+	recvsockaddr->sin_port = htons(PMP_PORT);
 	recvsockaddr->sin_addr.s_addr = htonl(INADDR_ANY);
 	
-	gateway->sin_port = PMP_PORT; //	Default port for NAT-PMP is 5351
+	gateway->sin_port = htons(PMP_PORT); //	Default port for NAT-PMP is 5351
 	
 	sendfd = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
 	recvfd = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
