@@ -23,7 +23,7 @@
 #include "route.h"
 
 //	Comment out to disable building main()
-#define PMP_DEBUG
+//#define PMP_DEBUG
 
 #define PMP_VERSION		0
 #define PMP_PORT		5351
@@ -71,8 +71,8 @@ typedef struct {
 	uint32_t	lifetime;
 } pmp_map_response_t;
 
-struct sockaddr_in *pmp_get_public(struct sockaddr_in *gateway);
-pmp_map_response_t *pmp_create_map(struct sockaddr_in *gateway, uint8_t type, uint16_t privateport, uint16_t publicport, uint32_t lifetime);
-pmp_map_response_t *pmp_destroy_map(struct sockaddr_in *gateway, uint8_t type, uint16_t privateport);
+struct sockaddr_in *pmp_get_public();
+pmp_map_response_t *pmp_create_map(uint8_t type, uint16_t privateport, uint16_t publicport, uint32_t lifetime);
+pmp_map_response_t *pmp_destroy_map(uint8_t type, uint16_t privateport);
 	
 #endif

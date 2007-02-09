@@ -27,14 +27,16 @@ static void double_timeout(struct timeval *to)
 }
 
 /*!
- *	pmp_get_public(struct sockaddr_in *) will return a sockaddr_in
+ *	pmp_get_public() will return a sockaddr_in
  *	structure representing the publicly facing IP address of the 
  *	default NAT gateway. The function will return NULL if:
  *		- The gateway doesn't support NAT-PMP
  *		- The gateway errors in some other spectacular fashion
  */
-struct sockaddr_in *pmp_get_public(struct sockaddr_in *gateway)
+struct sockaddr_in *pmp_get_public()
 {
+	struct sockaddr_in *gateway = default_gw();
+	
 	if (gateway == NULL)
 	{
 		fprintf(stderr, "Cannot request public IP from a NULL gateway!\n");
@@ -134,11 +136,13 @@ iterate:
 }
 
 /*!
- *	pmp_create_map(struct sockaddr_in *,uint8_t,uint16_t,uint16_t,uint32_t) 
+ *	pmp_create_map(uint8_t,uint16_t,uint16_t,uint32_t) 
  *	will return NULL on error, or a pointer to the pmp_map_response_t type
  */
-pmp_map_response_t *pmp_create_map(struct sockaddr_in *gateway, uint8_t type, uint16_t privateport, uint16_t publicport, uint32_t lifetime)
+pmp_map_response_t *pmp_create_map(uint8_t type, uint16_t privateport, uint16_t publicport, uint32_t lifetime)
 {
+	struct sockaddr_in *gateway = default_gw();
+	
 	if (gateway == NULL)
 	{
 		fprintf(stderr, "Cannot create mapping on a NULL gateway!\n");
@@ -230,14 +234,14 @@ iterate:
 }
 
 /*!
- *	pmp_destroy_map(struct sockaddr_in *,uint8_t,uint16_t) 
+ *	pmp_destroy_map(uint8_t,uint16_t) 
  *	will return NULL on error, or a pointer to the pmp_map_response_t type
  */
-pmp_map_response_t *pmp_destroy_map(struct sockaddr_in *gateway, uint8_t type, uint16_t privateport)
+pmp_map_response_t *pmp_destroy_map(uint8_t type, uint16_t privateport)
 {
 	pmp_map_response_t *response = NULL;
 	
-	if ((response = pmp_create_map(gateway, type, privateport, 0, 0)) == NULL)
+	if ((response = pmp_create_map(type, privateport, 0, 0)) == NULL)
 	{
 		fprintf(stderr, "Failed to properly destroy mapping for %d!\n", privateport);
 		return NULL;

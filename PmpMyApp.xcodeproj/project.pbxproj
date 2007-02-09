@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F18D6740B7C6AF400149D44 /* XzibitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F18D6730B7C6AF400149D44 /* XzibitController.m */; };
 		2F5A48720B75598F0052B0C1 /* pmpmapper.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F5A48710B75598F0052B0C1 /* pmpmapper.c */; };
 		2F5A48900B75658F0052B0C1 /* pmpmapper.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F5A48710B75598F0052B0C1 /* pmpmapper.c */; };
 		2F901ED00B7AEDB5004FF42C /* route.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F901ECF0B7AEDB5004FF42C /* route.c */; };
@@ -27,6 +28,8 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		2F18D56B0B7C516D00149D44 /* draft-cheshire-nat-pmp.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "draft-cheshire-nat-pmp.rtf"; path = "doc/draft-cheshire-nat-pmp.rtf"; sourceTree = "<group>"; };
 		2F18D56C0B7C516D00149D44 /* draft-cheshire-nat-pmp.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "draft-cheshire-nat-pmp.txt"; path = "doc/draft-cheshire-nat-pmp.txt"; sourceTree = "<group>"; };
+		2F18D6720B7C6AF400149D44 /* XzibitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XzibitController.h; path = source/XzibitController.h; sourceTree = "<group>"; };
+		2F18D6730B7C6AF400149D44 /* XzibitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XzibitController.m; path = source/XzibitController.m; sourceTree = "<group>"; };
 		2F5A48700B75598F0052B0C1 /* pmpmapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pmpmapper.h; path = source/pmpmapper.h; sourceTree = "<group>"; };
 		2F5A48710B75598F0052B0C1 /* pmpmapper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pmpmapper.c; path = source/pmpmapper.c; sourceTree = "<group>"; };
 		2F5A488A0B7565810052B0C1 /* PMPMapper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PMPMapper; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				2F5A486C0B7559600052B0C1 /* NAT-PMP */,
+				2F18D6720B7C6AF400149D44 /* XzibitController.h */,
+				2F18D6730B7C6AF400149D44 /* XzibitController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				2F5A48720B75598F0052B0C1 /* pmpmapper.c in Sources */,
 				2F901ED00B7AEDB5004FF42C /* route.c in Sources */,
+				2F18D6740B7C6AF400149D44 /* XzibitController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +275,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_CFLAGS = "-DPMP_DEBUG";
 				PREBINDING = NO;
 				PRODUCT_NAME = PMPMapper;
 				ZERO_LINK = YES;
@@ -287,6 +294,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_CFLAGS = "-DPMP_DEBUG";
 				PREBINDING = NO;
 				PRODUCT_NAME = PMPMapper;
 				ZERO_LINK = NO;

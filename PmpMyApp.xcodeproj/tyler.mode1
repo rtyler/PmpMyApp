@@ -265,8 +265,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>2</integer>
+									<integer>8</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -309,7 +308,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>pmpmapper.c</string>
+								<string>XzibitController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -317,11 +316,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>pmpmapper.c</string>
+										<string>XzibitController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2F18D65A0B7C688B00149D44</string>
+										<string>2F18D69D0B7C6D9900149D44</string>
 										<key>history</key>
 										<array>
 											<string>2F5A489C0B7565AE0052B0C1</string>
@@ -330,8 +329,10 @@
 											<string>2F901EF70B7AEED5004FF42C</string>
 											<string>2F9021510B7BE0FB004FF42C</string>
 											<string>2F18D5750B7C51B000149D44</string>
-											<string>2F18D62D0B7C661600149D44</string>
-											<string>2F18D62E0B7C661600149D44</string>
+											<string>2F18D6800B7C6CA900149D44</string>
+											<string>2F18D6950B7C6D8000149D44</string>
+											<string>2F18D6960B7C6D8000149D44</string>
+											<string>2F18D6970B7C6D8000149D44</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -343,8 +344,13 @@
 											<string>2F901ED80B7AEDBC004FF42C</string>
 											<string>2F901EE10B7AEE09004FF42C</string>
 											<string>2F18D5770B7C51B000149D44</string>
-											<string>2F18D60F0B7C60BE00149D44</string>
-											<string>2F18D62F0B7C661600149D44</string>
+											<string>2F18D66A0B7C68EB00149D44</string>
+											<string>2F18D6840B7C6CA900149D44</string>
+											<string>2F18D6850B7C6CA900149D44</string>
+											<string>2F18D6860B7C6CA900149D44</string>
+											<string>2F18D6870B7C6CA900149D44</string>
+											<string>2F18D6980B7C6D8000149D44</string>
+											<string>2F18D6990B7C6D8000149D44</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -376,7 +382,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 883}, {951, 0}}</string>
+								<string>{{0, 884}, {951, 0}}</string>
 								<key>RubberWindowFrame</key>
 								<string>1 104 1159 924 0 0 1680 1028 </string>
 							</dict>
@@ -402,9 +408,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2F18D5540B7C4C1900149D44</string>
+				<string>2F18D66C0B7C68EB00149D44</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>2F18D5550B7C4C1900149D44</string>
+				<string>2F18D66D0B7C68EB00149D44</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -538,11 +544,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>2F18D5FC0B7C5F9400149D44</string>
-		<string>2F18D5FD0B7C5F9400149D44</string>
-		<string>2F5A48CE0B756D650052B0C1</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>2F18D5FA0B7C5F9400149D44</string>
 		<string>2F5A48970B7565A60052B0C1</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
 		<string>/Software/Subversion/trunk/PmpMyApp/PmpMyApp.xcodeproj</string>
@@ -591,7 +592,7 @@
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBuildLogShowsTranscriptDefaultKey</key>
-								<string>{{0, 209}, {620, 261}}</string>
+								<string>{{0, 149}, {620, 321}}</string>
 								<key>PBXProjectModuleGUID</key>
 								<string>XCMainBuildResultsModuleGUID</string>
 								<key>PBXProjectModuleLabel</key>
@@ -629,7 +630,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>2F5A48970B7565A60052B0C1</string>
-				<string>2F18D55F0B7C4E5500149D44</string>
+				<string>2F18D66E0B7C68EB00149D44</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -999,9 +1000,9 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C0AD2B3069F1EA900FABCE6</string>
-				<string>2F18D5560B7C4C1900149D44</string>
+				<string>2F18D66F0B7C68EB00149D44</string>
 				<string>1CD0528B0623707200166675</string>
-				<string>2F18D5570B7C4C1900149D44</string>
+				<string>2F18D6700B7C68EB00149D44</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.run</string>

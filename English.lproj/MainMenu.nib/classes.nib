@@ -1,4 +1,19 @@
 {
-    IBClasses = ({CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }); 
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {createMapping = id; destroyMapping = id; }; 
+            CLASS = XzibitController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                localCreatePort = NSTextField; 
+                localDestroyPort = NSTextField; 
+                mappingDuration = NSTextField; 
+                natCreatePort = NSTextField; 
+                statusField = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
     IBVersion = 1; 
 }
