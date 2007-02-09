@@ -27,7 +27,11 @@
 
 #define PMP_VERSION		0
 #define PMP_PORT		5351
-#define PMP_TIMEOUT		250000
+#define PMP_TIMEOUT		250000	//	250000 useconds
+#define PMP_LIFETIME	3600	//	3600 seconds
+
+#define PMP_MAP_UDP		1
+#define PMP_MAP_TCP		2
 
 /*
  *	uint8_t:	version, opcodes
@@ -48,4 +52,27 @@ typedef struct {
 	uint32_t	address;
 } pmp_ip_response_t;
 
+typedef struct {
+	uint8_t		version;
+	uint8_t		opcode;
+	char		reserved[2];
+	uint16_t	privateport;
+	uint16_t	publicport;
+	uint32_t	lifetime;
+} pmp_map_request_t;
+
+typedef struct {
+	uint8_t		version;
+	uint8_t		opcode;
+	uint16_t	resultcode;
+	uint32_t	epoch;
+	uint16_t	privateport;
+	uint16_t	publicport;
+	uint32_t	lifetime;
+} pmp_map_response_t;
+
+struct sockaddr_in *pmp_get_public(struct sockaddr_in *gateway);
+pmp_map_response_t *pmp_create_map(struct sockaddr_in *gateway, uint8_t type, uint16_t privateport, uint16_t publicport, uint32_t lifetime);
+pmp_map_response_t *pmp_destroy_map(struct sockaddr_in *gateway, uint8_t type, uint16_t privateport);
+	
 #endif

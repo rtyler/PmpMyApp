@@ -25,6 +25,8 @@
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2F18D56B0B7C516D00149D44 /* draft-cheshire-nat-pmp.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "draft-cheshire-nat-pmp.rtf"; path = "doc/draft-cheshire-nat-pmp.rtf"; sourceTree = "<group>"; };
+		2F18D56C0B7C516D00149D44 /* draft-cheshire-nat-pmp.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "draft-cheshire-nat-pmp.txt"; path = "doc/draft-cheshire-nat-pmp.txt"; sourceTree = "<group>"; };
 		2F5A48700B75598F0052B0C1 /* pmpmapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pmpmapper.h; path = source/pmpmapper.h; sourceTree = "<group>"; };
 		2F5A48710B75598F0052B0C1 /* pmpmapper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pmpmapper.c; path = source/pmpmapper.c; sourceTree = "<group>"; };
 		2F5A488A0B7565810052B0C1 /* PMPMapper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PMPMapper; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,7 @@
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				2F18D5690B7C515D00149D44 /* Documentation */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -127,6 +130,15 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F18D5690B7C515D00149D44 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				2F18D56B0B7C516D00149D44 /* draft-cheshire-nat-pmp.rtf */,
+				2F18D56C0B7C516D00149D44 /* draft-cheshire-nat-pmp.txt */,
+			);
+			name = Documentation;
 			sourceTree = "<group>";
 		};
 		2F5A486C0B7559600052B0C1 /* NAT-PMP */ = {
