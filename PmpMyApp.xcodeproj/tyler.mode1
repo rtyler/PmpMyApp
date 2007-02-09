@@ -320,7 +320,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2F9021570B7BE0FB004FF42C</string>
+										<string>2F18D5670B7C4F3B00149D44</string>
 										<key>history</key>
 										<array>
 											<string>2F5A489C0B7565AE0052B0C1</string>
@@ -329,7 +329,7 @@
 											<string>2F901EF70B7AEED5004FF42C</string>
 											<string>2F9021510B7BE0FB004FF42C</string>
 											<string>2F9021520B7BE0FB004FF42C</string>
-											<string>2F9021530B7BE0FB004FF42C</string>
+											<string>2F9021760B7C1179004FF42C</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -340,9 +340,6 @@
 											<string>2F901EC50B7AED84004FF42C</string>
 											<string>2F901ED80B7AEDBC004FF42C</string>
 											<string>2F901EE10B7AEE09004FF42C</string>
-											<string>2F9021540B7BE0FB004FF42C</string>
-											<string>2F9021550B7BE0FB004FF42C</string>
-											<string>2F9021560B7BE0FB004FF42C</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -400,9 +397,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2F9021480B7BD19C004FF42C</string>
+				<string>2F18D5540B7C4C1900149D44</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>2F9021490B7BD19C004FF42C</string>
+				<string>2F18D5550B7C4C1900149D44</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -536,8 +533,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Software/Subversion/trunk/PmpMyApp/PmpMyApp.xcodeproj</string>
 		<string>2F5A48970B7565A60052B0C1</string>
+		<string>/Software/Subversion/trunk/PmpMyApp/PmpMyApp.xcodeproj</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
 	</array>
 	<key>WindowString</key>
@@ -579,12 +576,10 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBuildLogShowsTranscriptDefaultKey</key>
-								<string>{{0, 118}, {620, 352}}</string>
+								<string>{{0, 36}, {620, 434}}</string>
 								<key>PBXProjectModuleGUID</key>
 								<string>XCMainBuildResultsModuleGUID</string>
 								<key>PBXProjectModuleLabel</key>
@@ -622,7 +617,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>2F5A48970B7565A60052B0C1</string>
-				<string>2F9021580B7BE0FB004FF42C</string>
+				<string>2F18D55F0B7C4E5500149D44</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -633,7 +628,7 @@
 			<key>WindowToolGUID</key>
 			<string>2F5A48970B7565A60052B0C1</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -992,9 +987,9 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C0AD2B3069F1EA900FABCE6</string>
-				<string>2F90214A0B7BD19C004FF42C</string>
+				<string>2F18D5560B7C4C1900149D44</string>
 				<string>1CD0528B0623707200166675</string>
-				<string>2F90214B0B7BD19C004FF42C</string>
+				<string>2F18D5570B7C4C1900149D44</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.run</string>

@@ -35,38 +35,31 @@ static void double_timeout(struct timeval *to)
  */
 struct sockaddr_in *pmp_get_public(struct sockaddr_in *gateway)
 {
-	int recvfd, sendfd;
+	if (gateway == NULL)
+	{
+		fprintf(stderr, "Cannot request public IP from a NULL gateway!\n");
+		return NULL;
+	}
+
+	int sendfd;
 	int req_attempts = 1;	
 	struct timeval req_timeout;
 	pmp_ip_request_t req;
 	pmp_ip_response_t resp;
-	struct sockaddr_in *recvsockaddr = (struct sockaddr_in *)(malloc(sizeof(struct sockaddr)));
 	struct sockaddr_in *publicsockaddr = NULL;
 
 	req_timeout.tv_sec = 0;
 	req_timeout.tv_usec = PMP_TIMEOUT;
-
-	recvsockaddr->sin_family = AF_INET;
-	recvsockaddr->sin_port = htons(PMP_PORT);
-	recvsockaddr->sin_addr.s_addr = htonl(INADDR_ANY);
 	
 	gateway->sin_port = htons(PMP_PORT); //	Default port for NAT-PMP is 5351
 	
 	sendfd = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
-	recvfd = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
 	
 	//	Clean out both req and resp structures
 	bzero(&req, sizeof(pmp_ip_request_t));
 	bzero(&resp, sizeof(pmp_ip_response_t));
 	req.version = 0;
 	req.opcode	= 0;
-	
-	
-	if (bind(recvfd, (struct sockaddr *)(recvsockaddr), sizeof(struct sockaddr_in)) < 0)
-	{
-		fprintf(stderr, "Failed to bind properly to UDP:%d (%s)\n", PMP_PORT, strerror(errno));
-		return NULL;
-	}
 	
 	//	Attempt to contact NAT-PMP device 9 times as per: draft-cheshire-nat-pmp-02.txt  
 	while (req_attempts < 10)
@@ -84,13 +77,13 @@ struct sockaddr_in *pmp_get_public(struct sockaddr_in *gateway)
 			return NULL;
 		}
 		
-		if (setsockopt(recvfd, SOL_SOCKET, SO_RCVTIMEO, &req_timeout, sizeof(req_timeout)) < 0)
+		if (setsockopt(sendfd, SOL_SOCKET, SO_RCVTIMEO, &req_timeout, sizeof(req_timeout)) < 0)
 		{
 			fprintf(stderr, "There was an error setting the socket's options! (%s)\n", strerror(errno));
 			return NULL;
 		}		
 		
-		if (recvfrom(recvfd, &resp, sizeof(pmp_ip_response_t), 0, (struct sockaddr *)(&addr), &len) < 0)
+		if (recvfrom(sendfd, &resp, sizeof(pmp_ip_response_t), 0, (struct sockaddr *)(&addr), &len) < 0)
 		{			
 			if ( (errno != EAGAIN) || (req_attempts == 9) )
 			{
@@ -109,6 +102,7 @@ struct sockaddr_in *pmp_get_public(struct sockaddr_in *gateway)
 		}
 		else
 		{
+			publicsockaddr = &addr;
 			break;
 		}
 
