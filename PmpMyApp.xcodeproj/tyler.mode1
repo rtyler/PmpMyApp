@@ -218,6 +218,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -265,7 +267,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
+									<integer>3</integer>
+									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -301,14 +304,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>XzibitController.m</string>
+								<string>pmpmapper.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -316,23 +317,23 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>XzibitController.m</string>
+										<string>pmpmapper.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2F18D6AC0B7C706200149D44</string>
+										<string>2FC524AB0BAA452D0069F6CF</string>
 										<key>history</key>
 										<array>
 											<string>2F5A489C0B7565AE0052B0C1</string>
 											<string>2F5A489D0B7565AE0052B0C1</string>
 											<string>2F901EC10B7AED84004FF42C</string>
-											<string>2F901EF70B7AEED5004FF42C</string>
-											<string>2F9021510B7BE0FB004FF42C</string>
 											<string>2F18D5750B7C51B000149D44</string>
 											<string>2F18D6800B7C6CA900149D44</string>
-											<string>2F18D6950B7C6D8000149D44</string>
-											<string>2F18D6960B7C6D8000149D44</string>
-											<string>2F18D69D0B7C6D9900149D44</string>
+											<string>2FC5249F0BAA452D0069F6CF</string>
+											<string>2FC524A00BAA452D0069F6CF</string>
+											<string>2FC524A10BAA452D0069F6CF</string>
+											<string>2FC524A20BAA452D0069F6CF</string>
+											<string>2FC524A30BAA452D0069F6CF</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -346,6 +347,13 @@
 											<string>2F18D5770B7C51B000149D44</string>
 											<string>2F18D6850B7C6CA900149D44</string>
 											<string>2F18D6860B7C6CA900149D44</string>
+											<string>2FC524A40BAA452D0069F6CF</string>
+											<string>2FC524A50BAA452D0069F6CF</string>
+											<string>2FC524A60BAA452D0069F6CF</string>
+											<string>2FC524A70BAA452D0069F6CF</string>
+											<string>2FC524A80BAA452D0069F6CF</string>
+											<string>2FC524A90BAA452D0069F6CF</string>
+											<string>2FC524AA0BAA452D0069F6CF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -403,9 +411,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2F18D6A40B7C6DF400149D44</string>
+				<string>2FC524AC0BAA452D0069F6CF</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>2F18D6A50B7C6DF400149D44</string>
+				<string>2FC524AD0BAA452D0069F6CF</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -539,7 +547,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>2F5A48970B7565A60052B0C1</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
 		<string>/Software/Subversion/trunk/PmpMyApp/PmpMyApp.xcodeproj</string>
 	</array>
@@ -993,9 +1000,9 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C0AD2B3069F1EA900FABCE6</string>
-				<string>2F18D6A60B7C6DF400149D44</string>
+				<string>2FC524AE0BAA452D0069F6CF</string>
 				<string>1CD0528B0623707200166675</string>
-				<string>2F18D6A70B7C6DF400149D44</string>
+				<string>2FC524AF0BAA452D0069F6CF</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.run</string>
