@@ -62,6 +62,7 @@ struct sockaddr_in *default_gw()
     struct sockaddr *sa;
     struct sockaddr *rti_info[RTAX_MAX];
 	struct sockaddr_in *sin;
+	bool found = false;
 	
     mib[0] = CTL_NET;
     mib[1] = PF_ROUTE;
@@ -110,17 +111,28 @@ struct sockaddr_in *default_gw()
 			if (rtm->rtm_addrs & RTA_NETMASK)
 				bcopy(rti_info[RTAX_NETMASK], &mask, rti_info[RTAX_NETMASK]->sa_len);
 			
-			if (is_default_route(&addr, &mask)) 
-			{
-				sin = (struct sockaddr_in *)rti_info[RTAX_GATEWAY];
-				break;
+			if (rtm->rtm_addrs & RTA_GATEWAY &&
+				is_default_route(&addr, &mask)) 
+			{					
+				if (rti_info[RTAX_GATEWAY]) {
+					struct sockaddr_in *rti_sin = (struct sockaddr_in *)rti_info[RTAX_GATEWAY];
+					sin = (struct sockaddr_in *)(malloc(sizeof(struct sockaddr_in)));
+					
+					sin->sin_family = rti_sin->sin_family;
+					sin->sin_port = rti_sin->sin_port;
+					sin->sin_addr.s_addr = rti_sin->sin_addr.s_addr;
+					memcpy(sin, rti_info[RTAX_GATEWAY], sizeof(struct sockaddr_in));
+					
+					found = true;
+					break;
+				}
 			}
 		}
 		
 		rtm = (struct rt_msghdr2 *)next;
     }
 	
-    free(buf);
+	free(buf);
 	
-	return sin;
+    return (found ? sin : NULL);
 }
